@@ -11,10 +11,7 @@ local function _0x4d5e6f()
         return _0x3m4n5o
     else
         return {
-            "KUMWI2024","PREMIUM123","SKIBIDI456","TOILET789","BATTLEFRONT2025","WINDUI999",
-            "KUMWI-PREMIUM","SKIBIDI-ELITE","BATTLEFRONT-VIP","TOILET-MASTER","WINDUI-PRO",
-            "KUMWI-ULTIMATE","PREMIUM-ACCESS","VIP-MEMBER","ELITE-USER","MASTER-KEY",
-            "ULTIMATE-PASS","GOLDEN-KEY","DIAMOND-ACCESS","PLATINUM-VIP"
+            "KUMWI2024",
         }
     end
 end
@@ -920,4 +917,5 @@ _0x4x5y6z:Toggle({
 _0x4x5y6z:Section({
     Title = "by kumkki.",
     TextSize = 12,
+
 })
