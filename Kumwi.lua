@@ -1,201 +1,293 @@
-local _0x1a2b3c = {}
-local function _0x4d5e6f()
-    local _0x7g8h9i, _0x0j1k2l = pcall(function()
+local KeySystem = {}
+
+local function LoadValidKeys()
+    local success, keys = pcall(function()
         return game:HttpGet("https://raw.githubusercontent.com/yourusername/yourrepo/main/keys.txt")
     end)
-    if _0x7g8h9i then
-        local _0x3m4n5o = {}
-        for _0x6p7q8r in _0x0j1k2l:gmatch("[^\r\n]+") do
-            table.insert(_0x3m4n5o, _0x6p7q8r)
+    
+    if success then
+        local keyList = {}
+        for key in keys:gmatch("[^\r\n]+") do
+            table.insert(keyList, key)
         end
-        return _0x3m4n5o
+        return keyList
     else
-        local _0x9s0t1u = {
-            "\75\85\77\87\73\50\48\50\52","\80\82\69\77\73\85\77\49\50\51","\83\75\73\66\73\68\73\52\53\54",
-            "\84\79\73\76\69\84\55\56\57","\66\65\84\84\76\69\70\82\79\78\84\50\48\50\53","\87\73\78\68\85\73\57\57\57",
-            "\75\85\77\87\73\45\80\82\69\77\73\85\77","\83\75\73\66\73\68\73\45\69\76\73\84\69",
-            "\66\65\84\84\76\69\70\82\79\78\84\45\86\73\80","\84\79\73\76\69\84\45\77\65\83\84\69\82",
-            "\87\73\78\68\85\73\45\80\82\79","\75\85\77\87\73\45\85\76\84\73\77\65\84\69",
-            "\80\82\69\77\73\85\77\45\65\67\67\69\83\83","\86\73\80\45\77\69\77\66\69\82",
-            "\69\76\73\84\69\45\85\83\69\82","\77\65\83\84\69\82\45\75\69\89",
-            "\85\76\84\73\77\65\84\69\45\80\65\83\83","\71\79\76\68\69\78\45\75\69\89",
-            "\68\73\65\77\79\78\68\45\65\67\67\69\83\83","\80\76\65\84\73\78\85\77\45\86\73\80"
+        return {
+            "KUMWI2024",
+            "PREMIUM123", 
+            "SKIBIDI456",
+            "TOILET789",
+            "BATTLEFRONT2025",
+            "WINDUI999",
+            "KUMWI-PREMIUM",
+            "SKIBIDI-ELITE",
+            "BATTLEFRONT-VIP",
+            "TOILET-MASTER",
+            "WINDUI-PRO",
+            "KUMWI-ULTIMATE",
+            "PREMIUM-ACCESS",
+            "VIP-MEMBER",
+            "ELITE-USER",
+            "MASTER-KEY",
+            "ULTIMATE-PASS",
+            "GOLDEN-KEY",
+            "DIAMOND-ACCESS",
+            "PLATINUM-VIP"
         }
-        local _0x2v3w4x = {}
-        for _, _0x5y6z7a in pairs(_0x9s0t1u) do
-            local _0x8b9c0d = ""
-            for _0x1e2f3g in _0x5y6z7a:gmatch("%d+") do
-                _0x8b9c0d = _0x8b9c0d .. string.char(tonumber(_0x1e2f3g))
-            end
-            table.insert(_0x2v3w4x, _0x8b9c0d)
-        end
-        return _0x2v3w4x
     end
 end
-_0x1a2b3c.ValidKeys = _0x4d5e6f()
 
-local function _0x4h5i6j()
-    local _0x7k8l9m = game:GetService("RbxAnalyticsService"):GetClientId()
-    return _0x7k8l9m
-end
-local function _0x9w0x1y()
-    local _0x2z3a4b = Instance.new("ScreenGui")
-    local _0x5c6d7e = Instance.new("Frame")
-    local _0x8f9g0h = Instance.new("TextLabel")
-    local _0x1i2j3k = Instance.new("TextBox")
-    local _0x4l5m6n = Instance.new("TextButton")
-    local _0x7o8p9q = Instance.new("TextButton")
-    local _0x0r1s2t = Instance.new("TextLabel")
-    local _0x3u4v5w = Instance.new("TextButton")
-    _0x2z3a4b.Name = "KeySystemGUI"
-    _0x2z3a4b.Parent = game.CoreGui
-    _0x2z3a4b.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-    _0x5c6d7e.Parent = _0x2z3a4b
-    _0x5c6d7e.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-    _0x5c6d7e.BorderSizePixel = 0
-    _0x5c6d7e.Position = UDim2.new(0.5, -200, 0.5, -175)
-    _0x5c6d7e.Size = UDim2.new(0, 400, 0, 350)
-    _0x5c6d7e.Active = true
-    _0x5c6d7e.Draggable = true
-    local _0x6x7y8z = Instance.new("UICorner")
-    _0x6x7y8z.CornerRadius = UDim.new(0, 10)
-    _0x6x7y8z.Parent = _0x5c6d7e
-    _0x8f9g0h.Parent = _0x5c6d7e
-    _0x8f9g0h.BackgroundTransparency = 1
-    _0x8f9g0h.Position = UDim2.new(0, 0, 0, 10)
-    _0x8f9g0h.Size = UDim2.new(1, 0, 0, 50)
-    _0x8f9g0h.Font = Enum.Font.GothamBold
-    _0x8f9g0h.Text = "🚀 Kumwi Hub - Key System"
-    _0x8f9g0h.TextColor3 = Color3.fromRGB(255, 255, 255)
-    _0x8f9g0h.TextSize = 18
-    _0x1i2j3k.Parent = _0x5c6d7e
-    _0x1i2j3k.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-    _0x1i2j3k.BorderSizePixel = 0
-    _0x1i2j3k.Position = UDim2.new(0.1, 0, 0.25, 0)
-    _0x1i2j3k.Size = UDim2.new(0.8, 0, 0, 40)
-    _0x1i2j3k.Font = Enum.Font.Gotham
-    _0x1i2j3k.PlaceholderText = "Enter your key here..."
-    _0x1i2j3k.Text = ""
-    _0x1i2j3k.TextColor3 = Color3.fromRGB(255, 255, 255)
-    _0x1i2j3k.TextSize = 14
-    local _0x9a0b1c = Instance.new("UICorner")
-    _0x9a0b1c.CornerRadius = UDim.new(0, 5)
-    _0x9a0b1c.Parent = _0x1i2j3k
-    _0x3u4v5w.Parent = _0x5c6d7e
-    _0x3u4v5w.BackgroundColor3 = Color3.fromRGB(0, 120, 215)
-    _0x3u4v5w.BorderSizePixel = 0
-    _0x3u4v5w.Position = UDim2.new(0.1, 0, 0.45, 0)
-    _0x3u4v5w.Size = UDim2.new(0.8, 0, 0, 40)
-    _0x3u4v5w.Font = Enum.Font.GothamBold
-    _0x3u4v5w.Text = "🔗 Get Key (Linkvertise)"
-    _0x3u4v5w.TextColor3 = Color3.fromRGB(255, 255, 255)
-    _0x3u4v5w.TextSize = 14
-    local _0x2d3e4f = Instance.new("UICorner")
-    _0x2d3e4f.CornerRadius = UDim.new(0, 5)
-    _0x2d3e4f.Parent = _0x3u4v5w
-    _0x4l5m6n.Parent = _0x5c6d7e
-    _0x4l5m6n.BackgroundColor3 = Color3.fromRGB(0, 170, 0)
-    _0x4l5m6n.BorderSizePixel = 0
-    _0x4l5m6n.Position = UDim2.new(0.1, 0, 0.62, 0)
-    _0x4l5m6n.Size = UDim2.new(0.35, 0, 0, 40)
-    _0x4l5m6n.Font = Enum.Font.GothamBold
-    _0x4l5m6n.Text = "Submit Key"
-    _0x4l5m6n.TextColor3 = Color3.fromRGB(255, 255, 255)
-    _0x4l5m6n.TextSize = 14
-    local _0x5g6h7i = Instance.new("UICorner")
-    _0x5g6h7i.CornerRadius = UDim.new(0, 5)
-    _0x5g6h7i.Parent = _0x4l5m6n
-    _0x7o8p9q.Parent = _0x5c6d7e
-    _0x7o8p9q.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
-    _0x7o8p9q.BorderSizePixel = 0
-    _0x7o8p9q.Position = UDim2.new(0.55, 0, 0.62, 0)
-    _0x7o8p9q.Size = UDim2.new(0.35, 0, 0, 40)
-    _0x7o8p9q.Font = Enum.Font.GothamBold
-    _0x7o8p9q.Text = "Close"
-    _0x7o8p9q.TextColor3 = Color3.fromRGB(255, 255, 255)
-    _0x7o8p9q.TextSize = 14
-    local _0x8j9k0l = Instance.new("UICorner")
-    _0x8j9k0l.CornerRadius = UDim.new(0, 5)
-    _0x8j9k0l.Parent = _0x7o8p9q
-    _0x0r1s2t.Parent = _0x5c6d7e
-    _0x0r1s2t.BackgroundTransparency = 1
-    _0x0r1s2t.Position = UDim2.new(0, 0, 0.78, 0)
-    _0x0r1s2t.Size = UDim2.new(1, 0, 0, 60)
-    _0x0r1s2t.Font = Enum.Font.Gotham
-    _0x0r1s2t.Text = "Click 'Get Key' to get your access key\nHWID: " .. _0x4h5i6j()
-    _0x0r1s2t.TextColor3 = Color3.fromRGB(200, 200, 200)
-    _0x0r1s2t.TextSize = 12
-    _0x0r1s2t.TextWrapped = true
-    return _0x2z3a4b, _0x1i2j3k, _0x4l5m6n, _0x7o8p9q, _0x0r1s2t, _0x3u4v5w
-end
-local function _0x1m2n3o()
-    local _0x4p5q6r, _0x7s8t9u, _0x0v1w2x, _0x3y4z5a, _0x6b7c8d, _0x9e0f1g = _0x9w0x1y()
-    local _0x2h3i4j = false
-    _0x9e0f1g.MouseButton1Click:Connect(function()
-        local _0x9w0x1y = "\104\116\116\112\115\58\47\47\108\105\110\107\118\101\114\116\105\115\101\46\99\111\109\47\50\57\56\54\54\54\56\47\81\77\83\120\97\105\99\73\75\71\89\106\63\111\61\115\104\97\114\105\110\103"
-        local _0x2z3a4b = ""
-        for _0x5c6d7e in _0x9w0x1y:gmatch("%d+") do
-            _0x2z3a4b = _0x2z3a4b .. string.char(tonumber(_0x5c6d7e))
-        end
-        setclipboard(_0x2z3a4b)
-        _0x6b7c8d.Text = "✅ Link copied to clipboard!\nPaste in browser to get key"
-        _0x6b7c8d.TextColor3 = Color3.fromRGB(0, 255, 0)
+KeySystem.ValidKeys = LoadValidKeys()
+
+local function LoadWhitelist()
+    local success, whitelist = pcall(function()
+        return game:HttpGet("https://raw.githubusercontent.com/yourusername/yourrepo/main/whitelist.txt")
     end)
-    _0x0v1w2x.MouseButton1Click:Connect(function()
-        local _0x5k6l7m = _0x7s8t9u.Text
-        local _0x8n9o0p = false
-        for _, _0x1q2r3s in pairs(_0x1a2b3c.ValidKeys) do
-            if _0x5k6l7m == _0x1q2r3s then
-                _0x8n9o0p = true
+    
+    if success then
+        local users = {}
+        for user in whitelist:gmatch("[^\r\n]+") do
+            table.insert(users, user)
+        end
+        return users
+    else
+        return {
+            "username1",
+            "username2", 
+            "kumkki"
+        }
+    end
+end
+
+KeySystem.Whitelist = LoadWhitelist()
+
+local function GetHWID()
+    local hwid = game:GetService("RbxAnalyticsService"):GetClientId()
+    return hwid
+end
+
+local function IsWhitelisted()
+    local playerName = game.Players.LocalPlayer.Name
+    for _, name in pairs(KeySystem.Whitelist) do
+        if playerName == name then
+            return true
+        end
+    end
+    return false
+end
+
+local function CreateKeyGUI()
+    local ScreenGui = Instance.new("ScreenGui")
+    local Frame = Instance.new("Frame")
+    local Title = Instance.new("TextLabel")
+    local KeyBox = Instance.new("TextBox")
+    local SubmitButton = Instance.new("TextButton")
+    local CloseButton = Instance.new("TextButton")
+    local StatusLabel = Instance.new("TextLabel")
+    local LinkButton = Instance.new("TextButton")
+    
+    ScreenGui.Name = "KeySystemGUI"
+    ScreenGui.Parent = game.CoreGui
+    ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    
+    Frame.Parent = ScreenGui
+    Frame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+    Frame.BorderSizePixel = 0
+    Frame.Position = UDim2.new(0.5, -200, 0.5, -175)
+    Frame.Size = UDim2.new(0, 400, 0, 350)
+    Frame.Active = true
+    Frame.Draggable = true
+    
+    local Corner = Instance.new("UICorner")
+    Corner.CornerRadius = UDim.new(0, 10)
+    Corner.Parent = Frame
+    
+    Title.Parent = Frame
+    Title.BackgroundTransparency = 1
+    Title.Position = UDim2.new(0, 0, 0, 10)
+    Title.Size = UDim2.new(1, 0, 0, 50)
+    Title.Font = Enum.Font.GothamBold
+    Title.Text = "🚀 Kumwi Hub - Key System"
+    Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+    Title.TextSize = 18
+    
+    KeyBox.Parent = Frame
+    KeyBox.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+    KeyBox.BorderSizePixel = 0
+    KeyBox.Position = UDim2.new(0.1, 0, 0.25, 0)
+    KeyBox.Size = UDim2.new(0.8, 0, 0, 40)
+    KeyBox.Font = Enum.Font.Gotham
+    KeyBox.PlaceholderText = "Enter your key here..."
+    KeyBox.Text = ""
+    KeyBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+    KeyBox.TextSize = 14
+    
+    local KeyCorner = Instance.new("UICorner")
+    KeyCorner.CornerRadius = UDim.new(0, 5)
+    KeyCorner.Parent = KeyBox
+    
+    LinkButton.Parent = Frame
+    LinkButton.BackgroundColor3 = Color3.fromRGB(0, 120, 215)
+    LinkButton.BorderSizePixel = 0
+    LinkButton.Position = UDim2.new(0.1, 0, 0.45, 0)
+    LinkButton.Size = UDim2.new(0.8, 0, 0, 40)
+    LinkButton.Font = Enum.Font.GothamBold
+    LinkButton.Text = "🔗 Get Key (Linkvertise)"
+    LinkButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+    LinkButton.TextSize = 14
+    
+    local LinkCorner = Instance.new("UICorner")
+    LinkCorner.CornerRadius = UDim.new(0, 5)
+    LinkCorner.Parent = LinkButton
+    
+    SubmitButton.Parent = Frame
+    SubmitButton.BackgroundColor3 = Color3.fromRGB(0, 170, 0)
+    SubmitButton.BorderSizePixel = 0
+    SubmitButton.Position = UDim2.new(0.1, 0, 0.62, 0)
+    SubmitButton.Size = UDim2.new(0.35, 0, 0, 40)
+    SubmitButton.Font = Enum.Font.GothamBold
+    SubmitButton.Text = "Submit Key"
+    SubmitButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+    SubmitButton.TextSize = 14
+    
+    local SubmitCorner = Instance.new("UICorner")
+    SubmitCorner.CornerRadius = UDim.new(0, 5)
+    SubmitCorner.Parent = SubmitButton
+    
+    CloseButton.Parent = Frame
+    CloseButton.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
+    CloseButton.BorderSizePixel = 0
+    CloseButton.Position = UDim2.new(0.55, 0, 0.62, 0)
+    CloseButton.Size = UDim2.new(0.35, 0, 0, 40)
+    CloseButton.Font = Enum.Font.GothamBold
+    CloseButton.Text = "Close"
+    CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+    CloseButton.TextSize = 14
+    
+    local CloseCorner = Instance.new("UICorner")
+    CloseCorner.CornerRadius = UDim.new(0, 5)
+    CloseCorner.Parent = CloseButton
+    
+    StatusLabel.Parent = Frame
+    StatusLabel.BackgroundTransparency = 1
+    StatusLabel.Position = UDim2.new(0, 0, 0.78, 0)
+    StatusLabel.Size = UDim2.new(1, 0, 0, 60)
+    StatusLabel.Font = Enum.Font.Gotham
+    StatusLabel.Text = "Click 'Get Key' to get your access key\nHWID: " .. GetHWID()
+    StatusLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+    StatusLabel.TextSize = 12
+    StatusLabel.TextWrapped = true
+    
+    return ScreenGui, KeyBox, SubmitButton, CloseButton, StatusLabel, LinkButton
+end
+
+local function CheckKey()
+    if IsWhitelisted() then
+        game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "✅ Whitelist Access";
+            Text = "Welcome " .. game.Players.LocalPlayer.Name .. "!";
+            Duration = 3;
+        })
+        return true
+    end
+    
+    local gui, keyBox, submitBtn, closeBtn, statusLabel, linkBtn = CreateKeyGUI()
+    local keyValid = false
+    
+    linkBtn.MouseButton1Click:Connect(function()
+        setclipboard("https://linkvertise.com/2986668/QMSxaicIKGYj?o=sharing")
+        statusLabel.Text = "✅ Link copied to clipboard!\nPaste in browser to get key"
+        statusLabel.TextColor3 = Color3.fromRGB(0, 255, 0)
+    end)
+    
+    submitBtn.MouseButton1Click:Connect(function()
+        local inputKey = keyBox.Text
+        local validKey = false
+        
+        for _, key in pairs(KeySystem.ValidKeys) do
+            if inputKey == key then
+                validKey = true
                 break
             end
         end
-        if _0x8n9o0p then
-            _0x6b7c8d.Text = "✅ Valid key! Loading script..."
-            _0x6b7c8d.TextColor3 = Color3.fromRGB(0, 255, 0)
+        
+        if validKey then
+            statusLabel.Text = "✅ Valid key! Loading script..."
+            statusLabel.TextColor3 = Color3.fromRGB(0, 255, 0)
+            
             wait(2)
-            _0x4p5q6r:Destroy()
-            _0x2h3i4j = true
+            gui:Destroy()
+            keyValid = true
         else
-            _0x6b7c8d.Text = "❌ Invalid key! Get key from linkvertise."
-            _0x6b7c8d.TextColor3 = Color3.fromRGB(255, 0, 0)
-            _0x7s8t9u.Text = ""
+            statusLabel.Text = "❌ Invalid key! Get key from linkvertise."
+            statusLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
+            keyBox.Text = ""
         end
     end)
-    _0x3y4z5a.MouseButton1Click:Connect(function()
-        _0x4p5q6r:Destroy()
+    
+    closeBtn.MouseButton1Click:Connect(function()
+        gui:Destroy()
         game.Players.LocalPlayer:Kick("Key system closed")
     end)
-    repeat wait(0.1) until _0x2h3i4j or not _0x4p5q6r.Parent
-    return _0x2h3i4j
+    
+    repeat wait(0.1) until keyValid or not gui.Parent
+    
+    return keyValid
 end
-if not _0x1m2n3o() then
+
+if not CheckKey() then
     return
 end
-local _0x4t5u6v = loadstring(game:HttpGet("https://raw.githubusercontent.com/Footagesus/WindUI/main/dist/main.lua"))()
-local _0x7w8x9y = game:GetService("Players")
-local _0x0z1a2b = game:GetService("RunService")
-local _0x3c4d5e = game:GetService("ReplicatedStorage")
-local _0x6f7g8h = game:GetService("Workspace")
-local _0x9i0j1k = _0x7w8x9y.LocalPlayer
-local _0x2l3m4n = _0x4t5u6v:CreateWindow({
+
+local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/Footagesus/WindUI/main/dist/main.lua"))()
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Workspace = game:GetService("Workspace")
+
+local LocalPlayer = Players.LocalPlayer
+
+local Window = WindUI:CreateWindow({
     Title = "Kumwi Hub",
     Folder = "SkibidiHub",
     Icon = "sword",
     ToggleKey = Enum.KeyCode.K,
-    Topbar = {Height = 44, ButtonsType = "Mac"},
+    Topbar = {
+        Height = 44,
+        ButtonsType = "Mac",
+    },
 })
-local _0x5o6p7q = _0x2l3m4n:Tab({Title = "Main", Icon = "solar:home-2-bold"})
-local _0x8r9s0t = _0x2l3m4n:Tab({Title = "Player", Icon = "solar:user-bold"})
-local _0x1u2v3w = _0x2l3m4n:Tab({Title = "Visuals", Icon = "solar:eye-bold"})
-local _0x4x5y6z = _0x2l3m4n:Tab({Title = "Misc", Icon = "solar:settings-bold"})
-local _0x7a8b9c = false
-local _0x0d1e2f = nil
-local _0x3g4h5i = false
-local _0x6j7k8l = nil
-local _0x9m0n1o = false
-local _0x2p3q4r = nil
-local _0x5s6t7u = {
+
+local MainTab = Window:Tab({
+    Title = "Main",
+    Icon = "solar:home-2-bold",
+})
+
+local PlayerTab = Window:Tab({
+    Title = "Player",
+    Icon = "solar:user-bold",
+})
+
+local VisualsTab = Window:Tab({
+    Title = "Visuals",
+    Icon = "solar:eye-bold",
+})
+
+local MiscTab = Window:Tab({
+    Title = "Misc",
+    Icon = "solar:settings-bold",
+})
+
+local KillAuraEnabled = false
+local KillAuraConnection = nil
+
+local KillAuraSmallEnabled = false
+local KillAuraSmallConnection = nil
+
+local AutoFarmEnabled = false
+local AutoFarmConnection = nil
+
+local EnemyNames = {
     "SkibidiToilet", "Big ST toilet", "Anti Rocket Toilet", "Armed Roller Rocket Toilet",
     "Armored Sniper Toilet", "Armored laser toilet", "Astro scientist toilet", "Big spider",
     "Big toilet", "Big Nuclear Toilet", "Big ST toilet", "Big sniper Toilet", "Big spider toilet",
@@ -209,425 +301,497 @@ local _0x5s6t7u = {
     "Laser Toilet", "Mech Toilet", "Mutant", "Normal Toilet", "Rocket Toilet", "Scientist Toilet",
     "Sniper Toilet", "Spider Toilet", "Strider Toilet", "Toilet", "toilet"
 }
-local function _0x8v9w0x(_0x1y2z3a)
-    for _, _0x4b5c6d in pairs(_0x5s6t7u) do
-        if _0x1y2z3a:lower():find(_0x4b5c6d:lower()) or _0x1y2z3a:lower():find("toilet") then
+
+local function IsEnemy(name)
+    for _, enemyName in pairs(EnemyNames) do
+        if name:lower():find(enemyName:lower()) or name:lower():find("toilet") then
             return true
         end
     end
     return false
 end
-local function _0x7e8f9g()
-    local _0x0h1i2j = _0x6f7g8h:FindFirstChild("Living") or _0x6f7g8h:FindFirstChild("Living Folder")
-    if not _0x0h1i2j then
-        for _, _0x3k4l5m in pairs(_0x6f7g8h:GetChildren()) do
-            if _0x3k4l5m.Name:lower():find("living") then
-                return _0x3k4l5m
+
+local function GetLivingFolder()
+    local folder = Workspace:FindFirstChild("Living") or Workspace:FindFirstChild("Living Folder")
+    if not folder then
+        for _, v in pairs(Workspace:GetChildren()) do
+            if v.Name:lower():find("living") then
+                return v
             end
         end
     end
-    return _0x0h1i2j
+    return folder
 end
-local function _0x6n7o8p()
-    local _0x9q0r1s = nil
-    local _0x2t3u4v = math.huge
-    local _0x5w6x7y = _0x9i0j1k.Character
-    if not _0x5w6x7y or not _0x5w6x7y:FindFirstChild("HumanoidRootPart") then return nil end
-    local _0x8z9a0b = _0x5w6x7y.HumanoidRootPart
-    local _0x1c2d3e = _0x8z9a0b.Position
-    local _0x4f5g6h = _0x7e8f9g()
-    if not _0x4f5g6h then return nil end
-    for _, _0x7i8j9k in pairs(_0x4f5g6h:GetDescendants()) do
-        if _0x7i8j9k:IsA("Model") and _0x7i8j9k ~= _0x5w6x7y and _0x8v9w0x(_0x7i8j9k.Name) then
-            local _0x0l1m2n = _0x7i8j9k:FindFirstChildOfClass("Humanoid")
-            local _0x3o4p5q = _0x7i8j9k:FindFirstChild("HumanoidRootPart") or _0x7i8j9k:FindFirstChild("Torso") or _0x7i8j9k:FindFirstChild("Head")
-            if _0x0l1m2n and _0x3o4p5q and _0x0l1m2n.Health > 0 then
-                local _0x6r7s8t = (_0x3o4p5q.Position - _0x1c2d3e).Magnitude
-                if _0x6r7s8t < _0x2t3u4v then
-                    _0x2t3u4v = _0x6r7s8t
-                    _0x9q0r1s = _0x7i8j9k
+
+local function GetNearestEnemy()
+    local nearest = nil
+    local minDist = math.huge
+    local character = LocalPlayer.Character
+    if not character or not character:FindFirstChild("HumanoidRootPart") then return nil end
+    local hrp = character.HumanoidRootPart
+    local hrpPos = hrp.Position
+    
+    local livingFolder = GetLivingFolder()
+    if not livingFolder then return nil end
+    
+    for _, v in pairs(livingFolder:GetDescendants()) do
+        if v:IsA("Model") and v ~= character and IsEnemy(v.Name) then
+            local humanoid = v:FindFirstChildOfClass("Humanoid")
+            local enemyPart = v:FindFirstChild("HumanoidRootPart") or v:FindFirstChild("Torso") or v:FindFirstChild("Head")
+            if humanoid and enemyPart and humanoid.Health > 0 then
+                local dist = (enemyPart.Position - hrpPos).Magnitude
+                if dist < minDist then
+                    minDist = dist
+                    nearest = v
                 end
             end
         end
     end
-    return _0x9q0r1s
+    return nearest
 end
-local function _0x9u0v1w()
-    local _0x2x3y4z = nil
-    local _0x5a6b7c = math.huge
-    local _0x8d9e0f = _0x9i0j1k.Character
-    if not _0x8d9e0f or not _0x8d9e0f:FindFirstChild("HumanoidRootPart") then return nil end
-    local _0x1g2h3i = _0x8d9e0f.HumanoidRootPart
-    local _0x4j5k6l = _0x1g2h3i.Position
-    local _0x7m8n9o = _0x7e8f9g()
-    if not _0x7m8n9o then return nil end
-    for _, _0x0p1q2r in pairs(_0x7m8n9o:GetDescendants()) do
-        if _0x0p1q2r:IsA("Model") and _0x0p1q2r ~= _0x8d9e0f and _0x8v9w0x(_0x0p1q2r.Name) then
-            local _0x3s4t5u = _0x0p1q2r:FindFirstChildOfClass("Humanoid")
-            local _0x6v7w8x = _0x0p1q2r:FindFirstChild("HumanoidRootPart") or _0x0p1q2r:FindFirstChild("Torso") or _0x0p1q2r:FindFirstChild("Head")
-            if _0x3s4t5u and _0x6v7w8x and _0x3s4t5u.Health > 0 and _0x3s4t5u.MaxHealth <= 1000 then
-                local _0x9y0z1a = (_0x6v7w8x.Position - _0x4j5k6l).Magnitude
-                if _0x9y0z1a < _0x5a6b7c then
-                    _0x5a6b7c = _0x9y0z1a
-                    _0x2x3y4z = _0x0p1q2r
+
+local function GetNearestSmallEnemy()
+    local nearest = nil
+    local minDist = math.huge
+    local character = LocalPlayer.Character
+    if not character or not character:FindFirstChild("HumanoidRootPart") then return nil end
+    local hrp = character.HumanoidRootPart
+    local hrpPos = hrp.Position
+    
+    local livingFolder = GetLivingFolder()
+    if not livingFolder then return nil end
+    
+    for _, v in pairs(livingFolder:GetDescendants()) do
+        if v:IsA("Model") and v ~= character and IsEnemy(v.Name) then
+            local humanoid = v:FindFirstChildOfClass("Humanoid")
+            local enemyPart = v:FindFirstChild("HumanoidRootPart") or v:FindFirstChild("Torso") or v:FindFirstChild("Head")
+            if humanoid and enemyPart and humanoid.Health > 0 and humanoid.MaxHealth <= 1000 then
+                local dist = (enemyPart.Position - hrpPos).Magnitude
+                if dist < minDist then
+                    minDist = dist
+                    nearest = v
                 end
             end
         end
     end
-    return _0x2x3y4z
+    return nearest
 end
-local function _0x2b3c4d()
-    local _0x5e6f7g = nil
-    _0x0d1e2f = _0x0z1a2b.Heartbeat:Connect(function()
-        if not _0x7a8b9c then return end
-        local _0x8h9i0j = _0x9i0j1k.Character
-        if not _0x8h9i0j or not _0x8h9i0j:FindFirstChild("HumanoidRootPart") then return end
-        if _0x5e6f7g then
-            local _0x1k2l3m = _0x5e6f7g:FindFirstChildOfClass("Humanoid")
-            if not _0x1k2l3m or _0x1k2l3m.Health <= 0 then
-                _0x5e6f7g = nil
+
+local function StartKillAura()
+    local currentTarget = nil
+    KillAuraConnection = RunService.Heartbeat:Connect(function()
+        if not KillAuraEnabled then return end
+        local character = LocalPlayer.Character
+        if not character or not character:FindFirstChild("HumanoidRootPart") then return end
+        
+        if currentTarget then
+            local humanoid = currentTarget:FindFirstChildOfClass("Humanoid")
+            if not humanoid or humanoid.Health <= 0 then
+                currentTarget = nil
             end
         end
-        if not _0x5e6f7g then
-            _0x5e6f7g = _0x6n7o8p()
+        
+        if not currentTarget then
+            currentTarget = GetNearestEnemy()
         end
-        if _0x5e6f7g then
-            local _0x4n5o6p = _0x5e6f7g:FindFirstChild("HumanoidRootPart") or _0x5e6f7g:FindFirstChild("Torso")
-            if _0x4n5o6p then
-                _0x8h9i0j.HumanoidRootPart.CFrame = _0x4n5o6p.CFrame * CFrame.new(0, 0, 3)
-                _0x3c4d5e:WaitForChild("LMB"):FireServer()
-            end
-        end
-    end)
-end
-local function _0x7q8r9s()
-    if _0x0d1e2f then
-        _0x0d1e2f:Disconnect()
-        _0x0d1e2f = nil
-    end
-end
-local function _0x0t1u2v()
-    local _0x3w4x5y = nil
-    _0x6j7k8l = _0x0z1a2b.Heartbeat:Connect(function()
-        if not _0x3g4h5i then return end
-        local _0x6z7a8b = _0x9i0j1k.Character
-        if not _0x6z7a8b or not _0x6z7a8b:FindFirstChild("HumanoidRootPart") then return end
-        if _0x3w4x5y then
-            local _0x9c0d1e = _0x3w4x5y:FindFirstChildOfClass("Humanoid")
-            if not _0x9c0d1e or _0x9c0d1e.Health <= 0 then
-                _0x3w4x5y = nil
-            end
-        end
-        if not _0x3w4x5y then
-            _0x3w4x5y = _0x9u0v1w()
-        end
-        if _0x3w4x5y then
-            local _0x2f3g4h = _0x3w4x5y:FindFirstChild("HumanoidRootPart") or _0x3w4x5y:FindFirstChild("Torso")
-            if _0x2f3g4h then
-                _0x6z7a8b.HumanoidRootPart.CFrame = _0x2f3g4h.CFrame * CFrame.new(0, 0, 3)
-            end
-            _0x3c4d5e:WaitForChild("LMB"):FireServer()
-        end
-    end)
-end
-local function _0x5i6j7k()
-    if _0x6j7k8l then
-        _0x6j7k8l:Disconnect()
-        _0x6j7k8l = nil
-    end
-end
-local function _0x8l9m0n()
-    _0x2p3q4r = _0x0z1a2b.Heartbeat:Connect(function()
-        if not _0x9m0n1o then return end
-        for _, _0x1o2p3q in pairs(_0x6f7g8h:GetDescendants()) do
-            if _0x1o2p3q:IsA("ProximityPrompt") then
-                _0x1o2p3q.HoldDuration = 0
-                fireproximityprompt(_0x1o2p3q)
+        
+        if currentTarget then
+            local enemyPart = currentTarget:FindFirstChild("HumanoidRootPart") or currentTarget:FindFirstChild("Torso")
+            if enemyPart then
+                character.HumanoidRootPart.CFrame = enemyPart.CFrame * CFrame.new(0, 0, 3)
+                ReplicatedStorage:WaitForChild("LMB"):FireServer()
             end
         end
     end)
 end
-local function _0x4r5s6t()
-    if _0x2p3q4r then
-        _0x2p3q4r:Disconnect()
-        _0x2p3q4r = nil
+
+local function StopKillAura()
+    if KillAuraConnection then
+        KillAuraConnection:Disconnect()
+        KillAuraConnection = nil
     end
 end
-_0x5o6p7q:Toggle({
+
+local function StartKillAuraSmall()
+    local currentTarget = nil
+    KillAuraSmallConnection = RunService.Heartbeat:Connect(function()
+        if not KillAuraSmallEnabled then return end
+        local character = LocalPlayer.Character
+        if not character or not character:FindFirstChild("HumanoidRootPart") then return end
+        
+        if currentTarget then
+            local humanoid = currentTarget:FindFirstChildOfClass("Humanoid")
+            if not humanoid or humanoid.Health <= 0 then
+                currentTarget = nil
+            end
+        end
+        
+        if not currentTarget then
+            currentTarget = GetNearestSmallEnemy()
+        end
+        
+        if currentTarget then
+            local enemyPart = currentTarget:FindFirstChild("HumanoidRootPart") or currentTarget:FindFirstChild("Torso")
+            if enemyPart then
+                character.HumanoidRootPart.CFrame = enemyPart.CFrame * CFrame.new(0, 0, 3)
+            end
+            ReplicatedStorage:WaitForChild("LMB"):FireServer()
+        end
+    end)
+end
+
+local function StopKillAuraSmall()
+    if KillAuraSmallConnection then
+        KillAuraSmallConnection:Disconnect()
+        KillAuraSmallConnection = nil
+    end
+end
+
+local function StartAutoFarm()
+    AutoFarmConnection = RunService.Heartbeat:Connect(function()
+        if not AutoFarmEnabled then return end
+        for _, v in pairs(Workspace:GetDescendants()) do
+            if v:IsA("ProximityPrompt") then
+                v.HoldDuration = 0
+                fireproximityprompt(v)
+            end
+        end
+    end)
+end
+
+local function StopAutoFarm()
+    if AutoFarmConnection then
+        AutoFarmConnection:Disconnect()
+        AutoFarmConnection = nil
+    end
+end
+
+MainTab:Toggle({
     Title = "Kill Aura",
     Value = false,
-    Callback = function(_0x7u8v9w)
-        _0x7a8b9c = _0x7u8v9w
-        if _0x7u8v9w then
-            _0x2b3c4d()
+    Callback = function(state)
+        KillAuraEnabled = state
+        if state then
+            StartKillAura()
         else
-            _0x7q8r9s()
+            StopKillAura()
         end
     end
 })
-_0x5o6p7q:Toggle({
+
+MainTab:Toggle({
     Title = "Kill Aura (Small Only)",
     Value = false,
-    Callback = function(_0x0x1y2z)
-        _0x3g4h5i = _0x0x1y2z
-        if _0x0x1y2z then
-            _0x0t1u2v()
+    Callback = function(state)
+        KillAuraSmallEnabled = state
+        if state then
+            StartKillAuraSmall()
         else
-            _0x5i6j7k()
+            StopKillAuraSmall()
         end
     end
 })
-_0x5o6p7q:Toggle({
+
+MainTab:Toggle({
     Title = "Auto Farm (Cong Soon)",
     Value = false,
     Locked = true,
     LockedTitle = "Coming Soon",
-    Callback = function(_0x3a4b5c) end
+    Callback = function(state)
+    end
 })
-local _0x6d7e8f = false
-local _0x9g0h1i = nil
-local function _0x2j3k4l()
-    _0x9g0h1i = _0x0z1a2b.Heartbeat:Connect(function()
-        if not _0x6d7e8f then return end
-        local _0x5m6n7o = _0x9i0j1k.Character
-        if not _0x5m6n7o then return end
-        for _, _0x8p9q0r in pairs(_0x5m6n7o:GetChildren()) do
-            if _0x8p9q0r:IsA("Tool") then
-                local _0x1s2t3u = {_0x8p9q0r, _0x5m6n7o.HumanoidRootPart.Position, "Reload", _0x5m6n7o.HumanoidRootPart.CFrame.LookVector}
-                _0x3c4d5e:WaitForChild("GunSystem"):FireServer(unpack(_0x1s2t3u))
+
+local InfAmmoEnabled = false
+local InfAmmoConnection = nil
+
+local function StartInfAmmo()
+    InfAmmoConnection = RunService.Heartbeat:Connect(function()
+        if not InfAmmoEnabled then return end
+        local character = LocalPlayer.Character
+        if not character then return end
+        for _, tool in pairs(character:GetChildren()) do
+            if tool:IsA("Tool") then
+                local args = {tool, character.HumanoidRootPart.Position, "Reload", character.HumanoidRootPart.CFrame.LookVector}
+                ReplicatedStorage:WaitForChild("GunSystem"):FireServer(unpack(args))
             end
         end
     end)
 end
-local function _0x4v5w6x()
-    if _0x9g0h1i then
-        _0x9g0h1i:Disconnect()
-        _0x9g0h1i = nil
+
+local function StopInfAmmo()
+    if InfAmmoConnection then
+        InfAmmoConnection:Disconnect()
+        InfAmmoConnection = nil
     end
 end
-_0x5o6p7q:Toggle({
+
+MainTab:Toggle({
     Title = "Infinite Ammo (Coming Soon)",
     Value = false,
     Locked = true,
     LockedTitle = "Coming Soon",
-    Callback = function(_0x7y8z9a) end
+    Callback = function(state)
+    end
 })
-local _0x0b1c2d = false
-local _0x3e4f5g = nil
-local function _0x6h7i8j()
-    _0x3e4f5g = _0x0z1a2b.Heartbeat:Connect(function()
-        if not _0x0b1c2d then return end
+
+local NoCooldownEnabled = false
+local NoCooldownConnection = nil
+
+local function StartNoCooldown()
+    NoCooldownConnection = RunService.Heartbeat:Connect(function()
+        if not NoCooldownEnabled then return end
         pcall(function()
-            local _0x9k0l1m = _0x7e8f9g()
-            if not _0x9k0l1m then return end
-            local _0x2n3o4p = _0x9k0l1m:FindFirstChild(_0x9i0j1k.Name)
-            if not _0x2n3o4p then return end
-            local _0x5q6r7s = _0x2n3o4p:FindFirstChild("CooldownFolder")
-            if _0x5q6r7s then
-                for _, _0x8t9u0v in pairs(_0x5q6r7s:GetDescendants()) do
-                    if _0x8t9u0v:IsA("BoolValue") then
-                        _0x8t9u0v.Value = false
-                    elseif _0x8t9u0v:IsA("NumberValue") then
-                        _0x8t9u0v.Value = 0
+            local livingFolder = GetLivingFolder()
+            if not livingFolder then return end
+            local playerModel = livingFolder:FindFirstChild(LocalPlayer.Name)
+            if not playerModel then return end
+            local cooldownFolder = playerModel:FindFirstChild("CooldownFolder")
+            if cooldownFolder then
+                for _, v in pairs(cooldownFolder:GetDescendants()) do
+                    if v:IsA("BoolValue") then
+                        v.Value = false
+                    elseif v:IsA("NumberValue") then
+                        v.Value = 0
                     end
                 end
             end
-            local _0x1w2x3y = _0x2n3o4p:FindFirstChild("ValuesFolder")
-            if _0x1w2x3y then
-                local _0x4z5a6b = _0x1w2x3y:FindFirstChild("Stun")
-                if _0x4z5a6b then _0x4z5a6b.Value = 0 end
+            local valuesFolder = playerModel:FindFirstChild("ValuesFolder")
+            if valuesFolder then
+                local stun = valuesFolder:FindFirstChild("Stun")
+                if stun then stun.Value = 0 end
             end
         end)
     end)
 end
-local function _0x7c8d9e()
-    if _0x3e4f5g then
-        _0x3e4f5g:Disconnect()
-        _0x3e4f5g = nil
+
+local function StopNoCooldown()
+    if NoCooldownConnection then
+        NoCooldownConnection:Disconnect()
+        NoCooldownConnection = nil
     end
 end
-_0x5o6p7q:Toggle({
+
+MainTab:Toggle({
     Title = "No Cooldown (Coming Soon)",
     Value = false,
     Locked = true,
     LockedTitle = "Coming Soon",
-    Callback = function(_0x0f1g2h) end
+    Callback = function(state)
+    end
 })
-local _0x3i4j5k = false
-local _0x6l7m8n = 50
-local _0x9o0p1q = nil
-local _0x2r3s4t = nil
-local _0x5u6v7w = nil
-local function _0x8x9y0z()
-    local _0x1a2b3c = _0x9i0j1k.Character
-    if not _0x1a2b3c or not _0x1a2b3c:FindFirstChild("HumanoidRootPart") then return end
-    local _0x4d5e6f = _0x1a2b3c.HumanoidRootPart
-    _0x2r3s4t = Instance.new("BodyGyro")
-    _0x2r3s4t.MaxTorque = Vector3.new(math.huge, math.huge, math.huge)
-    _0x2r3s4t.P = 1000000
-    _0x2r3s4t.Parent = _0x4d5e6f
-    _0x5u6v7w = Instance.new("BodyVelocity")
-    _0x5u6v7w.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
-    _0x5u6v7w.Velocity = Vector3.new(0, 0, 0)
-    _0x5u6v7w.Parent = _0x4d5e6f
-    local _0x7g8h9i = game:GetService("UserInputService")
-    _0x9o0p1q = _0x0z1a2b.Heartbeat:Connect(function()
-        if not _0x3i4j5k then return end
-        local _0x0j1k2l = _0x6f7g8h.CurrentCamera
-        local _0x3m4n5o = Vector3.new(0, 0, 0)
-        if _0x7g8h9i:IsKeyDown(Enum.KeyCode.W) then
-            _0x3m4n5o = _0x3m4n5o + _0x0j1k2l.CFrame.LookVector
+
+local FlyEnabled = false
+local FlySpeed = 50
+local FlyConnection = nil
+local BodyGyro = nil
+local BodyVelocity = nil
+
+local function StartFly()
+    local character = LocalPlayer.Character
+    if not character or not character:FindFirstChild("HumanoidRootPart") then return end
+    local hrp = character.HumanoidRootPart
+    
+    BodyGyro = Instance.new("BodyGyro")
+    BodyGyro.MaxTorque = Vector3.new(math.huge, math.huge, math.huge)
+    BodyGyro.P = 1000000
+    BodyGyro.Parent = hrp
+    
+    BodyVelocity = Instance.new("BodyVelocity")
+    BodyVelocity.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
+    BodyVelocity.Velocity = Vector3.new(0, 0, 0)
+    BodyVelocity.Parent = hrp
+    
+    local UIS = game:GetService("UserInputService")
+    
+    FlyConnection = RunService.Heartbeat:Connect(function()
+        if not FlyEnabled then return end
+        local camera = Workspace.CurrentCamera
+        local moveDir = Vector3.new(0, 0, 0)
+        
+        if UIS:IsKeyDown(Enum.KeyCode.W) then
+            moveDir = moveDir + camera.CFrame.LookVector
         end
-        if _0x7g8h9i:IsKeyDown(Enum.KeyCode.S) then
-            _0x3m4n5o = _0x3m4n5o - _0x0j1k2l.CFrame.LookVector
+        if UIS:IsKeyDown(Enum.KeyCode.S) then
+            moveDir = moveDir - camera.CFrame.LookVector
         end
-        if _0x7g8h9i:IsKeyDown(Enum.KeyCode.A) then
-            _0x3m4n5o = _0x3m4n5o - _0x0j1k2l.CFrame.RightVector
+        if UIS:IsKeyDown(Enum.KeyCode.A) then
+            moveDir = moveDir - camera.CFrame.RightVector
         end
-        if _0x7g8h9i:IsKeyDown(Enum.KeyCode.D) then
-            _0x3m4n5o = _0x3m4n5o + _0x0j1k2l.CFrame.RightVector
+        if UIS:IsKeyDown(Enum.KeyCode.D) then
+            moveDir = moveDir + camera.CFrame.RightVector
         end
-        if _0x7g8h9i:IsKeyDown(Enum.KeyCode.Space) then
-            _0x3m4n5o = _0x3m4n5o + Vector3.new(0, 1, 0)
+        if UIS:IsKeyDown(Enum.KeyCode.Space) then
+            moveDir = moveDir + Vector3.new(0, 1, 0)
         end
-        if _0x7g8h9i:IsKeyDown(Enum.KeyCode.LeftControl) then
-            _0x3m4n5o = _0x3m4n5o - Vector3.new(0, 1, 0)
+        if UIS:IsKeyDown(Enum.KeyCode.LeftControl) then
+            moveDir = moveDir - Vector3.new(0, 1, 0)
         end
-        if _0x3m4n5o.Magnitude > 0 then
-            _0x3m4n5o = _0x3m4n5o.Unit
+        
+        if moveDir.Magnitude > 0 then
+            moveDir = moveDir.Unit
         end
-        _0x5u6v7w.Velocity = _0x3m4n5o * _0x6l7m8n
-        _0x2r3s4t.CFrame = _0x0j1k2l.CFrame
+        
+        BodyVelocity.Velocity = moveDir * FlySpeed
+        BodyGyro.CFrame = camera.CFrame
     end)
 end
-local function _0x6p7q8r()
-    if _0x9o0p1q then
-        _0x9o0p1q:Disconnect()
-        _0x9o0p1q = nil
+
+local function StopFly()
+    if FlyConnection then
+        FlyConnection:Disconnect()
+        FlyConnection = nil
     end
-    if _0x2r3s4t then
-        _0x2r3s4t:Destroy()
-        _0x2r3s4t = nil
+    if BodyGyro then
+        BodyGyro:Destroy()
+        BodyGyro = nil
     end
-    if _0x5u6v7w then
-        _0x5u6v7w:Destroy()
-        _0x5u6v7w = nil
+    if BodyVelocity then
+        BodyVelocity:Destroy()
+        BodyVelocity = nil
     end
 end
-_0x8r9s0t:Toggle({
+
+PlayerTab:Toggle({
     Title = "Fly",
     Value = false,
-    Callback = function(_0x9s0t1u)
-        _0x3i4j5k = _0x9s0t1u
-        if _0x9s0t1u then
-            _0x8x9y0z()
+    Callback = function(state)
+        FlyEnabled = state
+        if state then
+            StartFly()
         else
-            _0x6p7q8r()
+            StopFly()
         end
     end
 })
-_0x8r9s0t:Slider({
+
+PlayerTab:Slider({
     Title = "Fly Speed",
-    Value = {Min = 10, Max = 200, Default = 50},
-    Callback = function(_0x2v3w4x)
-        _0x6l7m8n = _0x2v3w4x
+    Value = {
+        Min = 10,
+        Max = 200,
+        Default = 50,
+    },
+    Callback = function(value)
+        FlySpeed = value
     end
 })
-_0x8r9s0t:Slider({
+
+PlayerTab:Slider({
     Title = "Walk Speed",
-    Value = {Min = 16, Max = 200, Default = 16},
-    Callback = function(_0x5y6z7a)
-        local _0x8b9c0d = _0x9i0j1k.Character
-        if _0x8b9c0d and _0x8b9c0d:FindFirstChildOfClass("Humanoid") then
-            _0x8b9c0d:FindFirstChildOfClass("Humanoid").WalkSpeed = _0x5y6z7a
+    Value = {
+        Min = 16,
+        Max = 200,
+        Default = 16,
+    },
+    Callback = function(value)
+        local character = LocalPlayer.Character
+        if character and character:FindFirstChildOfClass("Humanoid") then
+            character:FindFirstChildOfClass("Humanoid").WalkSpeed = value
         end
     end
 })
-_0x8r9s0t:Slider({
+
+PlayerTab:Slider({
     Title = "Jump Power",
-    Value = {Min = 50, Max = 200, Default = 50},
-    Callback = function(_0x1e2f3g)
-        local _0x4h5i6j = _0x9i0j1k.Character
-        if _0x4h5i6j and _0x4h5i6j:FindFirstChildOfClass("Humanoid") then
-            _0x4h5i6j:FindFirstChildOfClass("Humanoid").JumpPower = _0x1e2f3g
+    Value = {
+        Min = 50,
+        Max = 200,
+        Default = 50,
+    },
+    Callback = function(value)
+        local character = LocalPlayer.Character
+        if character and character:FindFirstChildOfClass("Humanoid") then
+            character:FindFirstChildOfClass("Humanoid").JumpPower = value
         end
     end
 })
-local _0x7k8l9m = false
-local _0x0n1o2p = nil
-local function _0x3q4r5s()
-    _0x0n1o2p = _0x0z1a2b.Stepped:Connect(function()
-        if not _0x7k8l9m then return end
-        local _0x6t7u8v = _0x9i0j1k.Character
-        if _0x6t7u8v then
-            for _, _0x9w0x1y in pairs(_0x6t7u8v:GetDescendants()) do
-                if _0x9w0x1y:IsA("BasePart") then
-                    _0x9w0x1y.CanCollide = false
+
+
+
+local NoclipEnabled = false
+local NoclipConnection = nil
+
+local function StartNoclip()
+    NoclipConnection = RunService.Stepped:Connect(function()
+        if not NoclipEnabled then return end
+        local character = LocalPlayer.Character
+        if character then
+            for _, part in pairs(character:GetDescendants()) do
+                if part:IsA("BasePart") then
+                    part.CanCollide = false
                 end
             end
         end
     end)
 end
-local function _0x2z3a4b()
-    if _0x0n1o2p then
-        _0x0n1o2p:Disconnect()
-        _0x0n1o2p = nil
+
+local function StopNoclip()
+    if NoclipConnection then
+        NoclipConnection:Disconnect()
+        NoclipConnection = nil
     end
-    local _0x5c6d7e = _0x9i0j1k.Character
-    if _0x5c6d7e then
-        for _, _0x8f9g0h in pairs(_0x5c6d7e:GetDescendants()) do
-            if _0x8f9g0h:IsA("BasePart") and _0x8f9g0h.Name ~= "HumanoidRootPart" then
-                _0x8f9g0h.CanCollide = true
+    local character = LocalPlayer.Character
+    if character then
+        for _, part in pairs(character:GetDescendants()) do
+            if part:IsA("BasePart") and part.Name ~= "HumanoidRootPart" then
+                part.CanCollide = true
             end
         end
     end
 end
-_0x8r9s0t:Toggle({
+
+PlayerTab:Toggle({
     Title = "Noclip",
     Value = false,
-    Callback = function(_0x1i2j3k)
-        _0x7k8l9m = _0x1i2j3k
-        if _0x1i2j3k then
-            _0x3q4r5s()
+    Callback = function(state)
+        NoclipEnabled = state
+        if state then
+            StartNoclip()
         else
-            _0x2z3a4b()
+            StopNoclip()
         end
     end
 })
-local _0x4l5m6n = false
-local _0x7o8p9q = game:GetService("UserInputService")
-_0x7o8p9q.JumpRequest:Connect(function()
-    if _0x4l5m6n then
-        local _0x0r1s2t = _0x9i0j1k.Character
-        if _0x0r1s2t and _0x0r1s2t:FindFirstChildOfClass("Humanoid") then
-            _0x0r1s2t:FindFirstChildOfClass("Humanoid"):ChangeState(Enum.HumanoidStateType.Jumping)
+
+local InfJumpEnabled = false
+local UIS = game:GetService("UserInputService")
+
+UIS.JumpRequest:Connect(function()
+    if InfJumpEnabled then
+        local character = LocalPlayer.Character
+        if character and character:FindFirstChildOfClass("Humanoid") then
+            character:FindFirstChildOfClass("Humanoid"):ChangeState(Enum.HumanoidStateType.Jumping)
         end
     end
 end)
-_0x8r9s0t:Toggle({
+
+PlayerTab:Toggle({
     Title = "Infinite Jump",
     Value = false,
-    Callback = function(_0x3u4v5w)
-        _0x4l5m6n = _0x3u4v5w
+    Callback = function(state)
+        InfJumpEnabled = state
     end
 })
-_0x8r9s0t:Button({
+
+PlayerTab:Button({
     Title = "Teleport to Corner",
     Callback = function()
-        local _0x6x7y8z = _0x9i0j1k.Character
-        if _0x6x7y8z and _0x6x7y8z:FindFirstChild("HumanoidRootPart") then
-            _0x6x7y8z.HumanoidRootPart.CFrame = CFrame.new(0, 100, 0)
+        local character = LocalPlayer.Character
+        if character and character:FindFirstChild("HumanoidRootPart") then
+            character.HumanoidRootPart.CFrame = CFrame.new(0, 100, 0)
         end
     end
 })
-local _0x9a0b1c = nil
-_0x8r9s0t:Button({
+
+local SavedPosition = nil
+
+PlayerTab:Button({
     Title = "Save Position",
     Callback = function()
-        local _0x2d3e4f = _0x9i0j1k.Character
-        if _0x2d3e4f and _0x2d3e4f:FindFirstChild("HumanoidRootPart") then
-            _0x9a0b1c = _0x2d3e4f.HumanoidRootPart.CFrame
-            _0x4t5u6v:Notify({
+        local character = LocalPlayer.Character
+        if character and character:FindFirstChild("HumanoidRootPart") then
+            SavedPosition = character.HumanoidRootPart.CFrame
+            WindUI:Notify({
                 Title = "Position Saved",
                 Content = "Position saved!",
                 Duration = 2,
@@ -635,277 +799,313 @@ _0x8r9s0t:Button({
         end
     end
 })
-_0x8r9s0t:Button({
+
+PlayerTab:Button({
     Title = "Load Position",
     Callback = function()
-        if _0x9a0b1c then
-            local _0x5g6h7i = _0x9i0j1k.Character
-            if _0x5g6h7i and _0x5g6h7i:FindFirstChild("HumanoidRootPart") then
-                _0x5g6h7i.HumanoidRootPart.CFrame = _0x9a0b1c
+        if SavedPosition then
+            local character = LocalPlayer.Character
+            if character and character:FindFirstChild("HumanoidRootPart") then
+                character.HumanoidRootPart.CFrame = SavedPosition
             end
         end
     end
 })
-local function _0x8j9k0l()
-    local _0x1m2n3o = {}
-    for _, _0x4p5q6r in pairs(_0x7w8x9y:GetPlayers()) do
-        if _0x4p5q6r ~= _0x9i0j1k then
-            table.insert(_0x1m2n3o, _0x4p5q6r.Name)
+
+local function UpdatePlayerList()
+    local playerList = {}
+    for _, player in pairs(Players:GetPlayers()) do
+        if player ~= LocalPlayer then
+            table.insert(playerList, player.Name)
         end
     end
-    return _0x1m2n3o
+    return playerList
 end
-local _0x7s8t9u = _0x8r9s0t:Dropdown({
+
+local TeleportDropdown = PlayerTab:Dropdown({
     Title = "Teleport to Player",
-    Values = _0x8j9k0l(),
-    Callback = function(_0x0v1w2x)
-        local _0x3y4z5a = _0x7w8x9y:FindFirstChild(_0x0v1w2x)
-        if _0x3y4z5a and _0x3y4z5a.Character and _0x3y4z5a.Character:FindFirstChild("HumanoidRootPart") then
-            local _0x6b7c8d = _0x9i0j1k.Character
-            if _0x6b7c8d and _0x6b7c8d:FindFirstChild("HumanoidRootPart") then
-                _0x6b7c8d.HumanoidRootPart.CFrame = _0x3y4z5a.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, 3)
+    Values = UpdatePlayerList(),
+    Callback = function(selected)
+        local targetPlayer = Players:FindFirstChild(selected)
+        if targetPlayer and targetPlayer.Character and targetPlayer.Character:FindFirstChild("HumanoidRootPart") then
+            local character = LocalPlayer.Character
+            if character and character:FindFirstChild("HumanoidRootPart") then
+                character.HumanoidRootPart.CFrame = targetPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, 3)
             end
         end
     end
 })
-_0x8r9s0t:Button({
+
+PlayerTab:Button({
     Title = "Refresh Players",
     Callback = function()
-        _0x7s8t9u:Refresh(_0x8j9k0l())
+        TeleportDropdown:Refresh(UpdatePlayerList())
     end
 })
-local _0x9e0f1g = false
-local _0x2h3i4j = Instance.new("Folder")
-_0x2h3i4j.Name = "ESP"
-_0x2h3i4j.Parent = game:GetService("CoreGui")
-local function _0x5k6l7m(_0x8n9o0p)
-    if not _0x8n9o0p:FindFirstChildOfClass("Humanoid") then return end
-    local _0x1q2r3s = Instance.new("Highlight")
-    _0x1q2r3s.Name = "ESP_" .. _0x8n9o0p.Name
-    _0x1q2r3s.FillColor = Color3.fromRGB(255, 0, 0)
-    _0x1q2r3s.OutlineColor = Color3.fromRGB(255, 255, 255)
-    _0x1q2r3s.FillTransparency = 0.5
-    _0x1q2r3s.OutlineTransparency = 0
-    _0x1q2r3s.Adornee = _0x8n9o0p
-    _0x1q2r3s.Parent = _0x2h3i4j
-    return _0x1q2r3s
+
+local ESPEnabled = false
+local ESPFolder = Instance.new("Folder")
+ESPFolder.Name = "ESP"
+ESPFolder.Parent = game:GetService("CoreGui")
+
+local function CreateESP(model)
+    if not model:FindFirstChildOfClass("Humanoid") then return end
+    local highlight = Instance.new("Highlight")
+    highlight.Name = "ESP_" .. model.Name
+    highlight.FillColor = Color3.fromRGB(255, 0, 0)
+    highlight.OutlineColor = Color3.fromRGB(255, 255, 255)
+    highlight.FillTransparency = 0.5
+    highlight.OutlineTransparency = 0
+    highlight.Adornee = model
+    highlight.Parent = ESPFolder
+    return highlight
 end
-local function _0x4t5u6v()
-    for _, _0x7w8x9y in pairs(_0x2h3i4j:GetChildren()) do
-        _0x7w8x9y:Destroy()
+
+local function UpdateESP()
+    for _, v in pairs(ESPFolder:GetChildren()) do
+        v:Destroy()
     end
-    if not _0x9e0f1g then return end
-    local _0x0z1a2b = _0x7e8f9g()
-    if not _0x0z1a2b then return end
-    for _, _0x3c4d5e in pairs(_0x0z1a2b:GetDescendants()) do
-        if _0x3c4d5e:IsA("Model") and _0x8v9w0x(_0x3c4d5e.Name) then
-            local _0x6f7g8h = _0x3c4d5e:FindFirstChildOfClass("Humanoid")
-            if _0x6f7g8h and _0x6f7g8h.Health > 0 then
-                _0x5k6l7m(_0x3c4d5e)
+    if not ESPEnabled then return end
+    local livingFolder = GetLivingFolder()
+    if not livingFolder then return end
+    for _, v in pairs(livingFolder:GetDescendants()) do
+        if v:IsA("Model") and IsEnemy(v.Name) then
+            local humanoid = v:FindFirstChildOfClass("Humanoid")
+            if humanoid and humanoid.Health > 0 then
+                CreateESP(v)
             end
         end
     end
 end
-local _0x9i0j1k_esp = nil
-local function _0x2l3m4n()
-    _0x4t5u6v()
-    _0x9i0j1k_esp = _0x0z1a2b.Heartbeat:Connect(function()
-        if not _0x9e0f1g then return end
-        _0x4t5u6v()
+
+local ESPConnection = nil
+
+local function StartESP()
+    UpdateESP()
+    ESPConnection = RunService.Heartbeat:Connect(function()
+        if not ESPEnabled then return end
+        UpdateESP()
     end)
 end
-local function _0x5o6p7q()
-    if _0x9i0j1k_esp then
-        _0x9i0j1k_esp:Disconnect()
-        _0x9i0j1k_esp = nil
+
+local function StopESP()
+    if ESPConnection then
+        ESPConnection:Disconnect()
+        ESPConnection = nil
     end
-    for _, _0x8r9s0t in pairs(_0x2h3i4j:GetChildren()) do
-        _0x8r9s0t:Destroy()
+    for _, v in pairs(ESPFolder:GetChildren()) do
+        v:Destroy()
     end
 end
-_0x1u2v3w:Toggle({
+
+VisualsTab:Toggle({
     Title = "ESP (Enemy Highlight)",
     Value = false,
-    Callback = function(_0x1u2v3w_val)
-        _0x9e0f1g = _0x1u2v3w_val
-        if _0x1u2v3w_val then
-            _0x2l3m4n()
+    Callback = function(state)
+        ESPEnabled = state
+        if state then
+            StartESP()
         else
-            _0x5o6p7q()
+            StopESP()
         end
     end
 })
-local _0x4x5y6z_esp = false
-local _0x7a8b9c_esp = Instance.new("Folder")
-_0x7a8b9c_esp.Name = "PlayerESP"
-_0x7a8b9c_esp.Parent = game:GetService("CoreGui")
-local function _0x0d1e2f()
-    for _, _0x3g4h5i in pairs(_0x7a8b9c_esp:GetChildren()) do
-        _0x3g4h5i:Destroy()
+
+local PlayerESPEnabled = false
+local PlayerESPFolder = Instance.new("Folder")
+PlayerESPFolder.Name = "PlayerESP"
+PlayerESPFolder.Parent = game:GetService("CoreGui")
+
+local function UpdatePlayerESP()
+    for _, v in pairs(PlayerESPFolder:GetChildren()) do
+        v:Destroy()
     end
-    if not _0x4x5y6z_esp then return end
-    for _, _0x6j7k8l in pairs(_0x7w8x9y:GetPlayers()) do
-        if _0x6j7k8l ~= _0x9i0j1k and _0x6j7k8l.Character then
-            local _0x9m0n1o = Instance.new("Highlight")
-            _0x9m0n1o.Name = "ESP_" .. _0x6j7k8l.Name
-            _0x9m0n1o.FillColor = Color3.fromRGB(0, 255, 0)
-            _0x9m0n1o.OutlineColor = Color3.fromRGB(255, 255, 255)
-            _0x9m0n1o.FillTransparency = 0.5
-            _0x9m0n1o.OutlineTransparency = 0
-            _0x9m0n1o.Adornee = _0x6j7k8l.Character
-            _0x9m0n1o.Parent = _0x7a8b9c_esp
+    if not PlayerESPEnabled then return end
+    for _, player in pairs(Players:GetPlayers()) do
+        if player ~= LocalPlayer and player.Character then
+            local highlight = Instance.new("Highlight")
+            highlight.Name = "ESP_" .. player.Name
+            highlight.FillColor = Color3.fromRGB(0, 255, 0)
+            highlight.OutlineColor = Color3.fromRGB(255, 255, 255)
+            highlight.FillTransparency = 0.5
+            highlight.OutlineTransparency = 0
+            highlight.Adornee = player.Character
+            highlight.Parent = PlayerESPFolder
         end
     end
 end
-local _0x2p3q4r_esp = nil
-_0x1u2v3w:Toggle({
+
+local PlayerESPConnection = nil
+
+VisualsTab:Toggle({
     Title = "Player ESP",
     Value = false,
-    Callback = function(_0x5s6t7u)
-        _0x4x5y6z_esp = _0x5s6t7u
-        if _0x5s6t7u then
-            _0x0d1e2f()
-            _0x2p3q4r_esp = _0x0z1a2b.Heartbeat:Connect(function()
-                _0x0d1e2f()
+    Callback = function(state)
+        PlayerESPEnabled = state
+        if state then
+            UpdatePlayerESP()
+            PlayerESPConnection = RunService.Heartbeat:Connect(function()
+                UpdatePlayerESP()
             end)
         else
-            if _0x2p3q4r_esp then
-                _0x2p3q4r_esp:Disconnect()
-                _0x2p3q4r_esp = nil
+            if PlayerESPConnection then
+                PlayerESPConnection:Disconnect()
+                PlayerESPConnection = nil
             end
-            for _, _0x8v9w0x in pairs(_0x7a8b9c_esp:GetChildren()) do
-                _0x8v9w0x:Destroy()
+            for _, v in pairs(PlayerESPFolder:GetChildren()) do
+                v:Destroy()
             end
         end
     end
 })
-local _0x1y2z3a = false
-local _0x4b5c6d = game:GetService("Lighting").Ambient
-local _0x7e8f9g_light = game:GetService("Lighting").Brightness
-local _0x0h1i2j = game:GetService("Lighting").OutdoorAmbient
-_0x1u2v3w:Toggle({
+
+local FullbrightEnabled = false
+local OriginalAmbient = game:GetService("Lighting").Ambient
+local OriginalBrightness = game:GetService("Lighting").Brightness
+local OriginalOutdoorAmbient = game:GetService("Lighting").OutdoorAmbient
+
+VisualsTab:Toggle({
     Title = "Fullbright",
     Value = false,
-    Callback = function(_0x3k4l5m)
-        _0x1y2z3a = _0x3k4l5m
-        local _0x6n7o8p = game:GetService("Lighting")
-        if _0x3k4l5m then
-            _0x6n7o8p.Ambient = Color3.fromRGB(255, 255, 255)
-            _0x6n7o8p.Brightness = 2
-            _0x6n7o8p.OutdoorAmbient = Color3.fromRGB(255, 255, 255)
+    Callback = function(state)
+        FullbrightEnabled = state
+        local Lighting = game:GetService("Lighting")
+        if state then
+            Lighting.Ambient = Color3.fromRGB(255, 255, 255)
+            Lighting.Brightness = 2
+            Lighting.OutdoorAmbient = Color3.fromRGB(255, 255, 255)
         else
-            _0x6n7o8p.Ambient = _0x4b5c6d
-            _0x6n7o8p.Brightness = _0x7e8f9g_light
-            _0x6n7o8p.OutdoorAmbient = _0x0h1i2jh1i2j
+            Lighting.Ambient = OriginalAmbient
+            Lighting.Brightness = OriginalBrightness
+            Lighting.OutdoorAmbient = OriginalOutdoorAmbient
         end
     end
 })
-_0x1u2v3w:Toggle({
+
+VisualsTab:Toggle({
     Title = "No Fog",
     Value = false,
-    Callback = function(_0x9q0r1s)
-        local _0x2t3u4v = game:GetService("Lighting")
-        if _0x9q0r1s then
-            _0x2t3u4v.FogEnd = 100000
-            _0x2t3u4v.FogStart = 0
+    Callback = function(state)
+        local Lighting = game:GetService("Lighting")
+        if state then
+            Lighting.FogEnd = 100000
+            Lighting.FogStart = 0
         else
-            _0x2t3u4v.FogEnd = 1000
-            _0x2t3u4v.FogStart = 0
+            Lighting.FogEnd = 1000
+            Lighting.FogStart = 0
         end
     end
 })
-local _0x5w6x7y = 70
-local _0x8z9a0b_fov = nil
-_0x1u2v3w:Slider({
+
+local FOVValue = 70
+local FOVConnection = nil
+
+VisualsTab:Slider({
     Title = "FOV",
-    Value = {Min = 30, Max = 120, Default = 70},
-    Callback = function(_0x1c2d3e)
-        _0x5w6x7y = _0x1c2d3e
-        if _0x8z9a0b_fov then
-            _0x8z9a0b_fov:Disconnect()
+    Value = {
+        Min = 30,
+        Max = 120,
+        Default = 70,
+    },
+    Callback = function(value)
+        FOVValue = value
+        if FOVConnection then
+            FOVConnection:Disconnect()
         end
-        _0x8z9a0b_fov = _0x0z1a2b.RenderStepped:Connect(function()
-            _0x6f7g8h.CurrentCamera.FieldOfView = _0x5w6x7y
+        FOVConnection = RunService.RenderStepped:Connect(function()
+            Workspace.CurrentCamera.FieldOfView = FOVValue
         end)
     end
 })
-local _0x4f5g6h_hat = false
-local _0x7i8j9k_hat = nil
-local _0x0l1m2n_hat = nil
-_0x1u2v3w:Toggle({
+
+local RainbowHatEnabled = false
+local RainbowHat = nil
+local RainbowConnection = nil
+
+VisualsTab:Toggle({
     Title = "Rainbow Asian Hat",
     Value = false,
-    Callback = function(_0x3o4p5q)
-        _0x4f5g6h_hat = _0x3o4p5q
-        if _0x3o4p5q then
-            local _0x6r7s8t = _0x9i0j1k.Character
-            if _0x6r7s8t and _0x6r7s8t:FindFirstChild("Head") then
-                _0x7i8j9k_hat = Instance.new("Part")
-                _0x7i8j9k_hat.Name = "RainbowHat"
-                _0x7i8j9k_hat.Size = Vector3.new(3, 0.1, 3)
-                _0x7i8j9k_hat.CanCollide = false
-                _0x7i8j9k_hat.Massless = true
-                _0x7i8j9k_hat.Material = Enum.Material.Neon
-                _0x7i8j9k_hat.Parent = _0x6r7s8t
-                local _0x9u0v1w = Instance.new("SpecialMesh")
-                _0x9u0v1w.MeshType = Enum.MeshType.FileMesh
-                _0x9u0v1w.MeshId = "rbxassetid://1028713"
-                _0x9u0v1w.Scale = Vector3.new(1.2, 0.8, 1.2)
-                _0x9u0v1w.Parent = _0x7i8j9k_hat
-                local _0x2x3y4z = Instance.new("Weld")
-                _0x2x3y4z.Part0 = _0x6r7s8t.Head
-                _0x2x3y4z.Part1 = _0x7i8j9k_hat
-                _0x2x3y4z.C0 = CFrame.new(0, 0.5, 0)
-                _0x2x3y4z.Parent = _0x7i8j9k_hat
-                local _0x5a6b7c = 0
-                _0x0l1m2n_hat = _0x0z1a2b.Heartbeat:Connect(function()
-                    if _0x7i8j9k_hat then
-                        _0x5a6b7c = (_0x5a6b7c + 0.01) % 1
-                        _0x7i8j9k_hat.Color = Color3.fromHSV(_0x5a6b7c, 1, 1)
+    Callback = function(state)
+        RainbowHatEnabled = state
+        if state then
+            local character = LocalPlayer.Character
+            if character and character:FindFirstChild("Head") then
+                RainbowHat = Instance.new("Part")
+                RainbowHat.Name = "RainbowHat"
+                RainbowHat.Size = Vector3.new(3, 0.1, 3)
+                RainbowHat.CanCollide = false
+                RainbowHat.Massless = true
+                RainbowHat.Material = Enum.Material.Neon
+                RainbowHat.Parent = character
+                
+                local mesh = Instance.new("SpecialMesh")
+                mesh.MeshType = Enum.MeshType.FileMesh
+                mesh.MeshId = "rbxassetid://1028713"
+                mesh.Scale = Vector3.new(1.2, 0.8, 1.2)
+                mesh.Parent = RainbowHat
+                
+                local weld = Instance.new("Weld")
+                weld.Part0 = character.Head
+                weld.Part1 = RainbowHat
+                weld.C0 = CFrame.new(0, 0.5, 0)
+                weld.Parent = RainbowHat
+                
+                local hue = 0
+                RainbowConnection = RunService.Heartbeat:Connect(function()
+                    if RainbowHat then
+                        hue = (hue + 0.01) % 1
+                        RainbowHat.Color = Color3.fromHSV(hue, 1, 1)
                     end
                 end)
             end
         else
-            if _0x0l1m2n_hat then
-                _0x0l1m2n_hat:Disconnect()
-                _0x0l1m2n_hat = nil
+            if RainbowConnection then
+                RainbowConnection:Disconnect()
+                RainbowConnection = nil
             end
-            if _0x7i8j9k_hat then
-                _0x7i8j9k_hat:Destroy()
-                _0x7i8j9k_hat = nil
+            if RainbowHat then
+                RainbowHat:Destroy()
+                RainbowHat = nil
             end
         end
     end
 })
-local _0x8d9e0f_heli = false
-local _0x1g2h3i_heli = nil
-local function _0x4j5k6l()
-    _0x1g2h3i_heli = _0x0z1a2b.Heartbeat:Connect(function()
-        if not _0x8d9e0f_heli then return end
+
+local AutoSkipHeliEnabled = false
+local AutoSkipHeliConnection = nil
+
+local function StartAutoSkipHeli()
+    AutoSkipHeliConnection = RunService.Heartbeat:Connect(function()
+        if not AutoSkipHeliEnabled then return end
         pcall(function()
-            _0x3c4d5e:WaitForChild("SkipHelicopter"):FireServer()
+            ReplicatedStorage:WaitForChild("SkipHelicopter"):FireServer()
         end)
     end)
 end
-local function _0x7m8n9o()
-    if _0x1g2h3i_heli then
-        _0x1g2h3i_heli:Disconnect()
-        _0x1g2h3i_heli = nil
+
+local function StopAutoSkipHeli()
+    if AutoSkipHeliConnection then
+        AutoSkipHeliConnection:Disconnect()
+        AutoSkipHeliConnection = nil
     end
 end
-_0x4x5y6z:Toggle({
+
+MiscTab:Toggle({
     Title = "Auto Skip Helicopter",
     Value = false,
-    Callback = function(_0x0p1q2r)
-        _0x8d9e0f_heli = _0x0p1q2r
-        if _0x0p1q2r then
-            _0x4j5k6l()
+    Callback = function(state)
+        AutoSkipHeliEnabled = state
+        if state then
+            StartAutoSkipHeli()
         else
-            _0x7m8n9o()
+            StopAutoSkipHeli()
         end
     end
 })
-_0x4x5y6z:Section({
+
+MiscTab:Section({
     Title = "by kumkki.",
     TextSize = 12,
 })
+
+
